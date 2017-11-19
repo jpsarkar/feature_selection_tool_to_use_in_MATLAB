@@ -1,0 +1,27 @@
+FEAST (Feature Selection Toolbox) provides implementations of common mutual information based filter feature selection algorithms, and an implementation of RELIEF. All functions expect discrete inputs (except RELIEF, which does not depend on the MIToolbox), and they return the selected feature indices. These implementations were developed to help our research into the similarities between these algorithms, and our results are presented in the following paper: 
+Conditional Likelihood Maximisation: A Unifying Framework for Information Theoretic Feature Selection
+G.Brown, A.Pocock, M.Lujan, M.-J.Zhao
+Journal of Machine Learning Research, vol 13, pages 27-66 (2012)
+
+For detail, please refer http://www.cs.man.ac.uk/~gbrown/fstoolbox/
+
+It has many files written in C. Hence, you need to compile all before using it. You need a compatible compiler. I have used in windows, so I'll explain about Windows 7 only.
+MinGW-w64 Compiler is free and you can use it for free.
+In many cases, even after installation, you may face problem like "Error using mex
+No supported compiler or SDK was found. You can install the freely available MinGW-w64 C/C++ compiler; see
+Install MinGW-w64 Compiler."
+
+To solve this, you need to either install from Matlab add-on or setup environment manually like below.
+
+Please note to install, installation folder should not contain spaces. use "C:\mingw-64" instead of "C:\Program Files\mingw-64"
+After that you need to setup environment variable as below.
+
+1) Make sure you have administrative privileges.
+2) Select Computer from the Start menu.
+3) Choose System properties from the context menu.
+4) Click Advanced system settings > Advanced tab.
+5) Click Environment Variables.
+6) Under System variables, select New.
+7) In the New System Variable dialog box, type MW_MINGW64_LOC in the Variable name field.
+8) In the Variable value field, type the location of the MinGW-w64 compiler installation, for example, 'C:\mingw-64'.
+9) Click "OK" to close the dialog boxes, then close the Control Panel dialog box.
